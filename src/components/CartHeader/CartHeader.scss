@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+        font-size: 20px;
+        color: rgb(128, 128, 128);
+        font-weight: 800;
+    }
+}
+
+
+.vsc{
+    font-size: 40px;
+    color: rgb(128, 128, 128);
+}
+
