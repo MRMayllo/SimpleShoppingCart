@@ -1,17 +1,17 @@
 import React from 'react'
 
-function CartFooter({subtotal}) {
+const CartFooter = ({ subtotal }) => {
 
 
-    
+
     return (
         <footer>
             <div className='subtotal-container'>
                 <h2>Subtotal: </h2>
                 <p>${subtotal}</p>
             </div>
-           
-           <button>Checkout</button>
+
+            <button>Checkout</button>
         </footer>
     )
 }
