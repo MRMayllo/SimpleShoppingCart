@@ -1,7 +1,7 @@
 import React from 'react'
 import { VscChromeClose } from 'react-icons/vsc'
- 
-function CartHeader() {
+
+const CartHeader = () => {
 
 
 
@@ -11,7 +11,7 @@ function CartHeader() {
                 <div className="cart-title">
                     <h1> YOUR CART</h1>
                 </div>
-                <VscChromeClose className='vsc' />              
+                <VscChromeClose className='vsc' />
             </div>
         </header>
     )

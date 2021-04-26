@@ -1,6 +1,18 @@
-ul{
-        height:  300px;
+ul {
+        height: 400px;
         overflow: auto;
-        
+}
 
+ul::-webkit-scrollbar {
+        display: none;
+}
+
+.empty-Cart {
+        height: 100%;
+        font-size: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        color: rgb(128, 128, 128);
 }
