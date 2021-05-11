@@ -1,15 +1,17 @@
-import data from '../Public/MOCK_DATA.json'
+import data2 from '../Public/product_list.json'
 
-export function fetchData(){
+
+
+export function fetchData2(){
     return new Promise((resolve, reject) => {
         setTimeout(()=>{
-            if(data){  
-                resolve(data)
+            if(data2){  
+                resolve(data2)
             }else{
-                reject("Error, smt went wrong")
+                reject(Error)
             }
 
-        }, 3000)
+        }, 2000)
     })
 }
 

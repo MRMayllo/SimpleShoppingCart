@@ -1,6 +1,8 @@
 ul {
         height: 400px;
+        width: 450px;
         overflow: auto;
+        padding-left: 0!important;
 }
 
 ul::-webkit-scrollbar {

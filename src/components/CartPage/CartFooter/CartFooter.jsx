@@ -1,8 +1,10 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { DataContext } from '../../DataContext/DataContextProvider'
 
-const CartFooter = ({ subtotal }) => {
 
+const CartFooter = () => {
 
+    const {subtotal} = useContext(DataContext)
 
     return (
         <footer>

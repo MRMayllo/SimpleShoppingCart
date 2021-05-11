@@ -85,6 +85,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-@import "./components/Cart/Cart.scss", "./components/CartHeader/CartHeader.scss", "./components/CartItem/CartItem.scss",
-  "./components/CartItemList/CartItemList.scss", "./components/CartFooter/CartFooter.scss",
-  "./components/Input/Input.scss";
+@import "./components/CartPage/Cart/Cart.scss", "./components/CartPage/CartHeader/CartHeader.scss", "./components/CartPage/CartItem/CartItem.scss",
+  "./components/CartPage/CartItemList/CartItemList.scss", "./components/CartPage/CartFooter/CartFooter.scss",
+  "./components/CartPage/Input/Input.scss";
+
