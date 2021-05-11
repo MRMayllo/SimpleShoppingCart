@@ -1,17 +1,17 @@
 .cart{
-    max-width: 400px;
-    // height: 80vh; //
 
+    width: 500px;
+    // height: 80vh; //
     background-color: white;
-    margin: 10px auto;
     display: flex;
     border-radius: 10px;
     box-shadow: 1px 1px 10px 10px  #aaaaaa;
+    margin: 30px auto;
 
 }
 
 .container{
-    width: 400px;
+    width: 500px;
     display: flex;
     flex-direction: column;
     margin: 6% 6% 6% 6%;

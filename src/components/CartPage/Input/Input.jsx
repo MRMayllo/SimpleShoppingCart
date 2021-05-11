@@ -1,39 +1,13 @@
-import React, { useState, useReducer, useEffect } from 'react'
-
-// function reducer(state, action) {
-//     switch (action.type) {
-//       case 'increment':
-//         return {count: state.count + 1};
-//       case 'decrement':
-//         return {count: state.count - 1};
-//       default:
-//         return state;
-//     }
-//   }
+import React, { useState, useEffect, useContext } from 'react'
+import { DataContext } from '../../DataContext/DataContextProvider'
 
 
-const Input = ({ quantity, price, updateQuantity, itemIndex }) => {
-
-    /************************************
-    first wanted to build this part with  useReducer 
-    but changed my mind because this case is not much complicated
-    ***************************************/
-
-
-    // const [state, dispatch] = useReducer(reducer, {count: quantity});
-
-    // function decrement() {
-    //     dispatch({type: 'decrement'})
-    // }
-
-    // function increment() {
-    //     dispatch({type: 'increment'})
-    // }
+const Input = ({ quantity, price, itemId }) => {
+    const { onUpdateCartItemQuantity } = useContext(DataContext)
 
     const [count, setCount] = useState(quantity)
 
     const decrement = () => {
-
         if (count - 1 >= 0) {
             setCount(count - 1)
         }
@@ -49,7 +23,7 @@ const Input = ({ quantity, price, updateQuantity, itemIndex }) => {
     }
 
     useEffect(() => {
-        updateQuantity(itemIndex, count)
+        onUpdateCartItemQuantity(itemId, count)
     }, [count])
 
     const onChangeHandler = (e) => {
@@ -60,7 +34,6 @@ const Input = ({ quantity, price, updateQuantity, itemIndex }) => {
         }
     }
 
-
     /* below are presented both quantity selection with input and select */
     return (
 
@@ -70,7 +43,8 @@ const Input = ({ quantity, price, updateQuantity, itemIndex }) => {
 
                 <button onClick={decrement}> - </button>
 
-                <input name="quantity"
+                <input
+                    name="quantity"
                     value={count}
                     onChange={onChangeHandler}
                     type="number"
@@ -90,7 +64,7 @@ const Input = ({ quantity, price, updateQuantity, itemIndex }) => {
                 }
             </select> */}
 
-            <p> ${(Number(price.substring(1)) * Math.ceil(Math.abs(quantity))).toFixed(2)}</p>
+            <p> ${(Number(price.substring(1)) * Math.ceil(Math.abs(count))).toFixed(2)}</p>
         </div>
 
     )
